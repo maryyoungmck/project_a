@@ -14,3 +14,11 @@ if __name__ == '__main__':
     print_hi('PyCharm')
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
+sleep = 'z'
+print(sleep*5)
+list = [1,2,3,5]
+print(list)
+newlist = list *2
+print(newlist)
+for i in list:
+    print (i *2)
