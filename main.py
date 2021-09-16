@@ -15,5 +15,8 @@ if __name__ == '__main__':
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
 import pandas as pd
 
+df = pd.read_csv(r"C:\Users\user\Desktop\Data Analytics\insurance_sample.csv")
+print(df.head())
+
 
 
