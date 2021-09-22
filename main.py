@@ -15,9 +15,14 @@ if __name__ == '__main__':
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
 import pandas as pd
 
-dfMary = pd.DataFrame ( {"Age": [12, 14, 11, 17], "Name":["Tom", "Sue", "Jane", "Joe"], "Skills":["L2", "L2", "L1", "L2"] })
-print (dfMary)
 
+pd.set_option('display.max_columns',100)
+pd.set_option('display.max_rows',5)
+
+
+data = pd.read_csv(r"C:\Users\user\Desktop\Data Analytics\netflix_titles.csv")
+print(data)
+print(data.columns)
 
 
 
