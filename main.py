@@ -1,8 +1,3 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
@@ -12,20 +7,21 @@ def print_hi(name):
 if __name__ == '__main__':
     print_hi('PyCharm')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
 import pandas as pd
 
-
-pd.set_option('display.max_columns',100)
+pd.set_option('display.max_columns',10)
 pd.set_option('display.max_rows',5)
+import matplotlib.pyplot as plt
+data = pd.read_csv(r"C:\Users\user\Desktop\Data Analytics\GBvideos.csv")
 
-
-data = pd.read_csv(r"C:\Users\user\Desktop\Data Analytics\netflix_titles.csv")
-print(data)
-print(data.columns)
-
-
-
-
+x = data["channel_title"].head(5)
+y = data["views"].head(5)
+y1 = data["likes"].head(5)
+plt.plot(x,y, marker = "o", color = "yellow")
+plt.plot(x,y1, marker = "o", color = "red")
+plt.title("channel title Vs Views and Likes")
+plt.ylabel("Views / Likes")
+plt.xlabel("Channel Title")
+plt.show()
 
 
